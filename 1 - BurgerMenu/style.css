@@ -1,1 +1,109 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  -webkit-box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  background-color: #3FAF82;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #3FAF82;
+  position: absolute;
+  width: 110px;
+  height: 70px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.center span {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  -webkit-box-shadow: 2px 1px 4px #313131;
+          box-shadow: 2px 1px 4px #313131;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.center span:nth-child(1) {
+  -webkit-transition: top 300ms 300ms, -webkit-transform 300ms;
+  transition: top 300ms 300ms, -webkit-transform 300ms;
+  transition: top 300ms 300ms, transform 300ms;
+  transition: top 300ms 300ms, transform 300ms, -webkit-transform 300ms;
+  top: 0;
+}
+
+.center span:nth-child(2) {
+  -webkit-transform: scale(1) translateY(-50%);
+          transform: scale(1) translateY(-50%);
+  top: 50%;
+  -webkit-transition: -webkit-transform 300ms 200ms;
+  transition: -webkit-transform 300ms 200ms;
+  transition: transform 300ms 200ms;
+  transition: transform 300ms 200ms, -webkit-transform 300ms 200ms;
+}
+
+.center span:nth-child(3) {
+  -webkit-transition: bottom 300ms 300ms, -webkit-transform 300ms;
+  transition: bottom 300ms 300ms, -webkit-transform 300ms;
+  transition: bottom 300ms 300ms, transform 300ms;
+  transition: bottom 300ms 300ms, transform 300ms, -webkit-transform 300ms;
+  bottom: 0;
+}
+
+.center--active span:nth-child(1) {
+  -webkit-transition: top 300ms, -webkit-transform 300ms 300ms;
+  transition: top 300ms, -webkit-transform 300ms 300ms;
+  transition: top 300ms, transform 300ms 300ms;
+  transition: top 300ms, transform 300ms 300ms, -webkit-transform 300ms 300ms;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 43%;
+}
+
+.center--active span:nth-child(2) {
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  -webkit-transform: scale(0) translateY(-50%);
+          transform: scale(0) translateY(-50%);
+}
+
+.center--active span:nth-child(3) {
+  -webkit-transition: bottom 300ms, -webkit-transform 300ms 300ms;
+  transition: bottom 300ms, -webkit-transform 300ms 300ms;
+  transition: bottom 300ms, transform 300ms 300ms;
+  transition: bottom 300ms, transform 300ms 300ms, -webkit-transform 300ms 300ms;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  bottom: 43%;
+}
+/*# sourceMappingURL=style.css.map */
